@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    image: gremo/docker-symfony-devenv:p-${PHP_VERSION:?}-c${COMPOSER_VERSION:?}-n${NODE_VERSION:?}-debian
+    volumes:
+      - ..:/workspace:cached
+      - node_modules:/workspace/node_modules
+      - public-build:/workspace/public/build
+    environment:
+      TZ: ${TZ:-Europe/Rome}
+    command: sleep infinity
+
+volumes:
+  node_modules:
+  public-build:

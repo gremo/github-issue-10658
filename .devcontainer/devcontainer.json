@@ -1,0 +1,22 @@
+{
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "emmet.includeLanguages": {
+          "twig": "html"
+        },
+        "files.associations": {
+          "*.html": "twig"
+        },
+        "tailwindCSS.emmetCompletions": true
+      },
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "mblode.twig-language-2"
+      ]
+    }
+  }
+}
